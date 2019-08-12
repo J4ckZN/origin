@@ -14,7 +14,6 @@ steps:
   displayName: 'Get help'
 
 - script: |
-    echo Let's try and install git and docker
     sudo apt-get install docker
     sudo apt-get install git
   displayName: 'Run a multi-line script that will fail'

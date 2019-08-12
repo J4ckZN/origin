@@ -16,7 +16,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: 'origin/Makefile'
+    projects: 'Makefile'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.

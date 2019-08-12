@@ -12,7 +12,10 @@ pool:
 steps:
 - script: sudo apt-get install docker
 - script: sudo apt-get install git
+- script: echo 'Get a load of this one...'
+- script: hack/env hack/build-base-images.sh
+- script: hack/env make release
   displayName: 'Get help'
 
 - script: |
-  displayName: 'Run a multi-line script that will fail'
+  displayName: 'Do not run a multi-line script that will fail'

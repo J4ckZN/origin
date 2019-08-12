@@ -10,15 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: 'Makefile'
+- script: echo Help me!
+  displayName: 'Get help'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    echo Let's try and install git and docker
+    apt-get install docker
+    apt-get install git
+  displayName: 'Run a multi-line script that will fail'

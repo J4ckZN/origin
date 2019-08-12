@@ -10,10 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Help me!
+- script: sudo apt-get install docker
+- script: sudo apt-get install git
   displayName: 'Get help'
 
 - script: |
-    sudo apt-get install docker
-    sudo apt-get install git
   displayName: 'Run a multi-line script that will fail'

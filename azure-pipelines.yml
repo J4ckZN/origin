@@ -10,7 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  displayName: Docker
 - script: sudo apt-get install docker
   displayName: Git
 - script: sudo apt-get install git

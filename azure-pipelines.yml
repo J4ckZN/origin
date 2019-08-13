@@ -10,10 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: mkdir $HOME/go
+  displayName: TestInvok
 - script: sudo apt-get install docker
-  displayName: Git
+  displayName: Docker
 - script: sudo apt-get install git
-  displayName: Base images
+  displayName: Git
 - script: hack/env hack/build-base-images.sh
   displayName: Build
 - script: hack/env make release

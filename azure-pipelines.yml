@@ -10,12 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  displayName: Docker
 - script: sudo apt-get install docker
+  displayName: Git
 - script: sudo apt-get install git
-- script: echo 'Get a load of this one...'
+  displayName: Base images
 - script: hack/env hack/build-base-images.sh
+  displayName: Build
 - script: hack/env make release
-  displayName: 'Get help'
 
 - script: |
   displayName: 'Do not run a multi-line script that will fail'
